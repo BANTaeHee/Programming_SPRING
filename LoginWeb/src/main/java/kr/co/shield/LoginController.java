@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/login")
 public class LoginController {
 	
+	UserDao userDao;
+	
 	@GetMapping("/login")
 	public String loginForm() {
 		return "loginForm";
@@ -67,6 +69,8 @@ public class LoginController {
 
 	private boolean loginCheck(String id, String pw) {
 		// TODO Auto-generated method stub
+		
+		
 		return "ezen".equals(id) && "0111".equals(pw);
 	}
 	
